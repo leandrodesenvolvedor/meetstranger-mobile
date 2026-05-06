@@ -1,17 +1,17 @@
-import { Text, View, TouchableOpacity } from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import { Button } from '../components/Button';
 import { useRouter } from 'expo-router';
-//import {chatSelectStyles as styles} from '../../styles/screens/chatSelectStyles';
+import {chatSelectStyles as styles} from '../styles/screens/chatSelectStyles';
 
 interface ChatCategory {
     id: string;
     name: string;
     description: string;
-    icon: string;
+    icon: string
 }
 
-const category: ChatCategory[] = [
+const category: ChatCategory [] = [
     {
         id: 'movies',
         name: 'Filmes',
@@ -22,54 +22,59 @@ const category: ChatCategory[] = [
         id: 'Games',
         name: 'Jogos',
         description: 'Converse sobre seus jogos favoritos',
-        icon: '🎮'
+         icon   : '👾'
     },
     {
-        id: 'series',
-        name: 'Séries',
-        description: 'Converse sobre suas séries favoritas',
-        icon: '📺'
+        id: 'Series',
+        name:'Séries',
+        description:' Converse sobre suas Séries favoritos',
+         icon : '📺'
     },
 ]
 
-export default function Select() {
+export default function chatSelect() {
     const router = useRouter();
     const handleCategorySelect = (categoryId: string) => {
-        router.push(`/chat/room?category=${categoryId}`);
+        router.push(`/chat/room?category=${categoryId}`)
     }
     return (
-        <View>
-            {/*Cabeçalho */}
-            <View>
-                <Text>Escolha um tópico para conversar</Text>
-                <Text>Clique nos tópicos abaixo</Text>
-            </View>
+        <View style={styles.container}>
+            {/**Cabeçalho */}
+            <View style={styles.header}>
+                <Text style={styles.title}> Escolha um Tropico para conversar</Text>
+                <Text style={styles.subtitle}> Clique nos tropicos abaixo</Text>
 
-            {/*Centro */}
+            </View>
+            {/** Centro */}
             <View>
-                {category.map((category) => (
-                    <TouchableOpacity
-                        key={category.id}
-                        //style={styles.categoryCard}
-                        onPress={() => handleCategorySelect(category.id)}
-                        activeOpacity={0.8}
-                    >
-                        <Text>{category.icon}</Text>
-                        <Text>{category.name}</Text>
-                        <Text>{category.description}</Text>
-                    </TouchableOpacity>
+              {category.map((category) => (
+                <TouchableOpacity
+                  key={category.id}
+                  style={styles.card}
+                  onPress={() => handleCategorySelect(category.id)}
+                  activeOpacity={0.8}
+                >
+                     <View style={styles.cardContent}>
+                       <Text>{category.icon}</Text>
+                       <Text style={styles.cardTitle}>{category.name}</Text>
+                       <Text style={styles.cardDescription}>{category.description}</Text>
+                     </View>
+                {/* conteudo aqui, se quiser */}
+                </TouchableOpacity>
                 ))}
             </View>
-
-            {/*Rodapé */}
-            <View>
+            {/** Rodape */}
+            <View style={styles.buttonContainer}>
                 <Button
-                    title="Voltar"
-                    onPress={() => router.back()}
-                    variant='primary' >
-                </Button>
+                   title='Voltar'
+                   onPress={() => router.back()}
+                   variant='primary'
+                   style={styles.backButton}
+   
+                />
+
             </View>
         </View>
-    );
+    )
 }
-
+ 

@@ -1,45 +1,71 @@
-import {StyleSheet} from 'react-native';
-import {colors} from '../../constants/color';
-import { Shadows, Spacing} from '../../design-system/tokens/spacing';
-import { TextStyles } from '../../design-system/tokens/typography';
+import { StyleSheet } from 'react-native';
+import { colors } from '../../constants/color';
+
 export const chatSelectStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: colors.background,
-    },
-    content: {
-        flex: 1,
-        paddingHorizontal: Spacing.xl,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: Spacing['4xl'],
-    },
-    logo: {
-        width: 120,
-        height: 120,
-        marginBottom: Spacing.xl,
-        ...Shadows.lg,
-        shadowColor: colors.shadow,},
-    title:{
-        ...TextStyles.title,
-        fontWeight: 'bold',
-        color: colors.primary,
-        marginBottom: Spacing.sm,
-        letterSpacing: -0.2,
-        lineHeight: 26,
-        textAlign: 'center',
-    },
-    subtitle: {
-        ...TextStyles.body,
-        color: colors.textSecondary,
-        marginBottom: Spacing['4xl'],
-        lineHeight: 22,
-        textAlign: 'center',},
-    inputContainer: {
-        width: '100%',
-    },
-    registerButton: {
-        marginBottom: Spacing.sm,
-        marginTop: Spacing.xl,
-    },
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f7fb',
+    padding: 16,
+  },
+
+  header: {
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: colors.primary,
+  },
+
+  subtitle: {
+    fontSize: 14,
+    color: '#666',
+    marginTop: 4,
+    textAlign: 'center',
+  },
+
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#e5e7eb',
+  },
+
+  cardContent: {
+    alignItems: 'center',
+  },
+
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: colors.primary,
+    marginTop: 8,
+  },
+
+  cardDescription: {
+    fontSize: 13,
+    color: '#777',
+    marginTop: 4,
+    textAlign: 'center',
+  },
+
+  buttonContainer: {
+    marginTop: 'auto',
+  },
+
+  backButton: {
+    backgroundColor: colors.primary,
+    padding: 16,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+
+  backButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
 });

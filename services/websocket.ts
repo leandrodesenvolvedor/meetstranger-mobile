@@ -1,4 +1,4 @@
-import AsyncStore from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { API_CONFIG } from './config';
 import { io, Socket } from 'socket.io-client';
 class webSocketService {
@@ -6,7 +6,7 @@ class webSocketService {
     private isConnected = false;
 
     async connect(): Promise<void> {
-        const token = await AsyncStore.getItem('authToken')
+        const token = await AsyncStorage.getItem('authToken')
         this.socket = io(API_CONFIG.SOCKET_URL, {
             auth: { token },
             transports: ['websocket']
@@ -45,7 +45,7 @@ class webSocketService {
     
     disconnected(): void {
         if (this.socket) {
-            this.socket.disconnected();
+            this.socket.disconnect();
             this.socket = null;
             this.isConnected = false;
         }

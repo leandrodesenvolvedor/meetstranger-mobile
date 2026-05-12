@@ -29,14 +29,14 @@ export default function Home() {
                     style={styles.logo}
                 />
                 <Text style={styles.welcome}>Bem-vindo, {user?.username || 'Stranger'}</Text>
-                <Text style={styles.subtitle}>Pronto para s conectar com pessoas?</Text>
+                <Text style={styles.subtitle}>Pronto para se conectar com pessoas?</Text>
             </View>
             {/**centro da página */}
             <View style={styles.content}>
                 {/**sessão superior do centro */}
                 <View style={styles.Card}>
                     <Text style={styles.cardTitle}>MeetStranger</Text>
-                    <Text style={styles.cardDescription}>Converse com pessoas ao redor do mundo e encpntre ésspas que gostam dos mesmos interesses que os seus!!!</Text>
+                    <Text style={styles.cardDescription}>Converse com pessoas ao redor do mundo e encontre pessoas que gostam dos mesmos interesses que os seus!</Text>
                 </View>
                 {/**sessão central do centro da página */}
                 <View style={styles.feature}>

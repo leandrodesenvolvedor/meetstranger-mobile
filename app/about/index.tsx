@@ -1,9 +1,9 @@
 import { Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { router, useRouter } from 'expo-router';
-import {aboutStyles as styles} from '../../styles/screens/aboutStyles';
+import { useRouter } from 'expo-router';
+import { aboutStyles as styles } from '../../styles/screens/aboutStyles';
 
-export default function about() {
+export default function About() {
     const router = useRouter();
 
     return (
@@ -21,7 +21,7 @@ export default function about() {
                 <View>
                     <Text style={styles.subtitle}>O que é o MeetStranger</Text>
                     <Text>MeetStranger é um aplicativo de encontros privados que conecta pessoas
-                        de todo o mundo para conversas casuais e divertida. Com uma interface simples e intuitiva,
+                        de todo o mundo para conversas casuais e divertidas. Com uma interface simples e intuitiva,
                         o MeetStranger permite que os usuários se conectem com outras pessoas de forma segura,
                         proporcionando uma experiência única de socialização online.
                     </Text>
@@ -49,7 +49,7 @@ export default function about() {
                 <View>
                     <Text style={styles.subtitle}>⚡ Recursos</Text>
                     <Text>1. Chat em tempo real.</Text>
-                    <Text>2. Multiplas escolhas de categorias</Text>
+                    <Text>2. Múltiplas escolhas de categorias</Text>
                     <Text>3. Interface simples e intuitiva</Text>
                     <Text>4. Conexão rápida</Text>
                     <Text>5. Totalmente gratuito</Text>
@@ -57,7 +57,7 @@ export default function about() {
 
                 {/*Parte  inferior superior do corpo*/}
                 <View>
-                    <Text style={styles.subtitle} >💻 Sobre o desenvolvedor</Text>
+                    <Text style={styles.subtitle}>💻 Sobre o desenvolvedor</Text>
                     <Text>Leandro Fagner</Text>
                     <Text>Desenvolvedor independente com paixão por criar soluções inovadoras.
                         Com experiência em desenvolvimento de aplicativos móveis e web, Formação em Desenvolvimento de Software,
@@ -67,11 +67,11 @@ export default function about() {
 
                 {/*Parte centro inferior inferior do corpo*/}
                 <View>
-                      <Text>Projeto Inpirado no projeto Omegle</Text>
+                    <Text>Projeto Inspirado no projeto Omegle</Text>
                     <Text>Sua Privacidade é a nossa prioridade.</Text>
-                    <Text>versão 1.0.0</Text>
+                    <Text>Versão 1.0.0</Text>
                     <Text>Você pode sair a qualquer momento</Text>
-                    <Text>2026 ❤️ feito com cainho para conectar pessoas</Text>
+                    <Text>2026 ❤️ Feito com carinho para conectar pessoas</Text>
                 </View>
             </View>
         </ScrollView>

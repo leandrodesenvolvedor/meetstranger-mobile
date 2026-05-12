@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { Input } from '../../components/input';
 import { Button } from '../../components/Button';
 import { loginStyles as styles } from '../../styles/screens/loginStyles';
+
 export default function Login() {
     const router = useRouter();
     const [email, setEmail] = useState('');
@@ -35,7 +36,7 @@ export default function Login() {
         >
             <View style={styles.content}>
                 <Image source={require('../../assets/favicon.png')} style={styles.logo} resizeMode='contain' />
-                <Text style={styles.title}>Bem vindo ao APP MeetStranger!</Text>
+                <Text style={styles.title}>Bem-vindo ao MeetStranger!</Text>
                 <Text style={styles.subtitle}>Faça login para continuar</Text>
                 <View style={styles.inputContainer}>
                     <Input

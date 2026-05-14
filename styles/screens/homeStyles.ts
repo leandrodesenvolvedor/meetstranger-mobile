@@ -27,7 +27,7 @@ export const homeStyles = StyleSheet.create({
     welcome: {
         ...TextStyles.title,
         fontWeight: 'bold',
-        color: colors.primary,
+        color: colors.secondary,
         marginBottom: Spacing.xs,
         letterSpacing: -0.1,
         lineHeight: 24,

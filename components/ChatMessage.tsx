@@ -15,7 +15,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
     return (
         <DSChatBubble
             message={message.text}
-            position={message ? 'right' : 'left'}
+            position={message.isUser ? 'right' : 'left'}
             timestamp={formatTime(message.timestamp)}
             username={message.UserName}
             showUsername={!message.isUser} // Exibe o nome do parceiro apenas para mensagens recebidas
